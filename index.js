@@ -21,7 +21,7 @@ function calcSavings(){
     var monthlySavings = Math.round(dailySavings*30)
     var maintenancePetrol=2000
     var yearlySavings = Math.round((dailySavings*365)+maintenancePetrol)
-    var costOut = Math.round(vehicleCost/yearlySavings)
+    var costOut = Math.round((vehicleCost/yearlySavings)*10)/10
 
 
     console.log(petrolCost)
