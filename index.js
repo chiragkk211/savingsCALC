@@ -17,7 +17,7 @@ function calcSavings(){
     var totalRunningCost = perKMbattery+runningCostEV
     var dailyCostEV = dailyCommute*totalRunningCost
     var vehicleCost = 65600
-    var dailySavings = parseFloat((dailyCostPetrol-dailyCostEV))
+    var dailySavings = Math.round((dailyCostPetrol-dailyCostEV))
     var monthlySavings = Math.round(dailySavings*30)
     var maintenancePetrol=2000
     var yearlySavings = Math.round((dailySavings*365)+maintenancePetrol)
@@ -53,7 +53,7 @@ function calcSavings(){
     document.getElementById("dailySavings").innerText=dailySavings
     document.getElementById("monthlySavings").innerText=monthlySavings
     document.getElementById("yearlySavings").innerText=yearlySavings
-    document.getElementById("costOut").innerText=costOut
+    document.getElementById("costOut").innerText=costOut+" year"
 
 
 }
